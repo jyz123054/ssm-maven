@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.test.dao.OrderServiceDao" >
+
+  <resultMap id="BaseResultMap" type="OrderEntity" >
+    <id column="oid" property="oid" jdbcType="BIGINT" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    oid, description
+  </sql>
+  
+  <select id="getOrderInfo" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_ssm_order
+    where oid = #{id,jdbcType=BIGINT}
+  </select>
+  
+</mapper>
