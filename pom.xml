@@ -21,7 +21,7 @@
 		<jackson.version>2.5.1</jackson.version>
 		<guava.version>17.0</guava.version>
 		<spymemcached.version>2.11.2</spymemcached.version>
-		<commons-io.version>2.4</commons-io.version>
+		<commons-io.version>2.7</commons-io.version>
 		<apache.httpclient>4.3.6</apache.httpclient>
 		<aspectjweaver.version>1.8.4</aspectjweaver.version>
 	</properties>
